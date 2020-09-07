@@ -1,0 +1,1307 @@
+\documentclass[10pt,a4paper]
+{article}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{fancybox}
+\usepackage{times}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage[left=1in,right=0.7in,top=1in,bottom=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[title,toc,titletoc,page]{appendix}
+%\usepackage[left=1.25in,right=1in,top=1in,bottom=1in]{geometry}
+%\usepackage{tocloft}
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\renewcommand\refname{BIBLIOGRAPHY}
+\usepackage{amsmath}
+\numberwithin{table}{section}
+%\graphicspath{ {figures/} }
+%\usepackage{natbib}
+%\begin{document}
+
+\begin{document}
+%---------------------------------------Cover Page-------------------------------------------------------
+\newpage
+
+\pagestyle{empty}
+ %\thispagestyle{empty}
+	\pagenumbering{gobble}
+	\thisfancyput(-0.0in,-9.5in){%
+	%\thisfancypage{%
+%\setlength{\fboxrule}{1pt}\doublebox}{} 
+\setlength{\unitlength}{1in}\framebox(6.7,9.7)}
+
+
+\begin{center}
+      \vspace{0.7 in}
+      \textbf{SAVITRIBAI PHULE PUNE UNIVERSITY}
+      \vspace{0.5 in}\\
+       \textbf{A PRELIMINARY PROJECT REPORT ON}
+			\end{center}
+\vspace{0.2 in}
+	\begin{center} \textbf 
+{\Large \lq \lq \vspace{0.2in} Smart Campus  An Android And Web Based Application using IOT and NFC Technology \rq \rq}
+	\end{center}
+     \vspace{0.2 in}
+	\begin{center}
+	 submitted towords the\\
+partial fulfillment of the requirements of
+ 
+	\end{center}
+	\vspace{0.2 in}
+	
+	\begin{center}
+	   \textbf{BACHELOR OF ENGINEERING (Computer Engineering)}
+	\end{center}
+	\vspace{0.05 in}
+	
+	\begin{center}
+	   \textbf{BY}
+	\end{center}
+	\vspace{0.2 in}
+\begin{center}	
+SHIVKUMAR S. HEGONDE \hspace{10mm} Exam No:B150514233\\
+SHYAM P. AMBILKAR \hspace{17.6 mm} Exam No:B150514204   \\
+RUTUJA R. THERADE    \hspace{18.2 mm} Exam No:B150514309  \\
+SURBHI D. LINGAMWAR \hspace{13.4 mm} Exam No:B150514262   \\
+\end{center}
+
+	\vspace{0.3in}
+	
+	\begin{center}
+	  \textbf{UNDER THE GUIDANCE OF}\\
+	 Dr. D. P. GADEKAR
+	\end{center}
+	\vspace{0.7in}
+	  \begin{figure}[h]
+			\centering
+			\includegraphics[width=2.5cm]{logo.JPG}
+		\end{figure}
+		
+       \vspace{0.5in}
+
+		\begin{center}
+	  \textbf{DEPARTMENT OF COMPUTER ENGINEERING\\
+	  JSPM's\\
+	  IMPERIAL COLLEGE OF ENGINEERING AND RESEARCH,\\
+	  WAGHOLI, PUNE 412 207\\2018-19}
+	  \end{center}
+%\end{document}
+
+%------------------Front Page end
+\newpage
+\pagestyle{empty}
+ %\thispagestyle{empty}
+	\pagenumbering{gobble}
+	\thisfancyput(-0.0in,-10.0in){%
+	%\thisfancypage{%
+%\setlength{\fboxrule}{1pt}\doublebox}{} 
+\setlength{\unitlength}{1in}\framebox(6.7,10.3)}
+\begin{center}
+{\includegraphics[width=2.5cm]{logo.JPG}\vspace{1cm}\\
+\bf JSPM's\\
+IMPERIAL COLLEGE OF ENGINEERING AND RESEARCH,\\
+	  WAGHOLI, PUNE 412 207 \\ DEPARTMENT OF COMPUTER ENGINEERING\\}
+\end{center}
+
+\vspace{0.1in}
+\begin{center}
+\textbf{\underline{C E R T I F I C A T E}}\\
+\vspace{0.05in}
+\end{center}
+		\noindent
+  				\setlength{\baselineskip}{1.5\baselineskip}
+	\begin{center}
+This is to certify that the seminar work entitled\\
+\vspace{0.03in}
+		\textbf{\large  Smart Campus An Android And Web Based Application using IOT and NFC Technology  }\\
+\singlespace
+\vspace{0.02in}
+Submitted by \\
+\begin{center}	
+	
+SHIVKUMAR S. HEGONDE \hspace{10mm} Exam No:B150514233\\
+SHYAM P. AMBILKAR \hspace{17.6 mm} Exam No:B150514204   \\
+RUTUJA R. THERADE    \hspace{18.2 mm} Exam No:B150514309  \\
+SURBHI D. LINGAMWAR \hspace{13.4 mm} Exam No:B150514262   \\
+\end{center}
+\end{center}
+\vspace{0.05in}
+\onehalfspace
+\begin{quote}
+is a bonafide work carried out under the supervision of Dr. D. P. GADEKAR  and it is\linebreak
+submitted towards the partial fulfilment of the requirement of Bachelor of \linebreak Engineering(Computer Engineering).\\   		\end{quote}
+		
+\vspace{0.5 in}
+\begin{minipage}[t]{7cm}
+\flushleft
+\hspace{0.4in} Dr. D. P. GADEKAR\\
+\hspace{0.5in}(Project Guide)\\
+\hspace{0.25in} Computer Engineering\\
+\hspace{0.55in} Department
+\end{minipage}
+\hspace{0.5 in}
+\begin{minipage}[t]{7cm}
+
+\hspace{1.4in} Prof. V. BHUJADE\\
+\hspace*{1.4 in}(Project Co-ordinator)\\ \hspace*{1.3 in} Computer Engineering\\
+\hspace*{1.6in} Department
+\end{minipage}
+\vspace{0.9 in}
+
+\begin{minipage}[t]{7.8cm}
+\flushleft
+\hspace{0.3in}DR. D. P. GADEKAR\\
+\hspace{0.65in}(HOD)\\
+\hspace*{0.25in}Computer Engineering\\
+\hspace*{0.55in}Department
+\end{minipage}
+\hspace{0.5 in}
+\begin{minipage}[t]{7cm}
+
+
+\end{minipage}
+\\
+\vspace{0.5 in}
+
+\begin{minipage}[t]{7.8cm}
+\flushleft
+\hspace{0.3in}Date:\\
+\hspace{0.3in}Place:\\
+\end{minipage}
+
+		
+%------------------Certificate
+
+%--------------------Certificate ends
+
+\newpage					%start a new page
+%\pagestyle{plain}
+%\pagenumbering{roman}
+\pagestyle{empty}
+ %\thispagestyle{empty}
+	\pagenumbering{gobble}
+							
+		\newpage					%start a new page
+\pagestyle{plain}
+\pagenumbering{roman}
+		\begin{center}				%centre align the text
+			
+				\section*{Abstract}
+				 \addcontentsline{toc}{section}{Abstract}
+				\vspace{.2 in}       %leave space of 0.5 inches vertically
+			
+		\end{center}
+		
+
+		\begin{normalsize}
+{
+
+					Researcher in smart campus area is still growing, where every researcher defines the concept of smart campus with less perspective that has not been conical in the same conception of the concept. Education is the one of the basic necessity of every individual. Running a collage with all, students, parents and faculties with complete communication between each other on a single platform will be boon for everyday associated with it. This system considers the basic and primary need of College. The main contribution of smart campus development based on the new advance technology to make easier campus life. Contact less technology provides easy way to enter data when accessing any class room or equipment in the campus. IoT support easier way to report a real time environment status and cloud computing is use to organize various information effectively and provide data service The idea of Smart Campus helps to deal with the present problems faced by schools, campus or educational organization. The Proposed Project carried out the task such as Student Attendance, Marks Report, Smart Teaching, video Surveillance, and Notice and so on. It Improves Quality of education and is efficient of time. This system is carried out using Internet of Things (IoT).This system makes use of Web Application and Android Application which communicate with NFC tags to Perform Campus activities. Cloud computing is used to store information and to communicate with user.
+
+
+\vspace{0.5 in}  
+
+{\textbf {Keywords:}Internet of Things (IoT), NFC Technology, Arduino, Cloud Computing}
+	
+}
+				
+		\end{normalsize}
+
+%-----------------------------------Acknowledgement ends-------------------------------------------------
+\newpage
+		\begin{center}				%centre align the text
+			
+				\section*{Acknowledgement}
+				 \addcontentsline{toc}{section}{Acknowledgement}
+				\vspace{.15 in}       %leave space of 0.5 inches vertically
+			
+		\end{center}
+
+		\begin{normalsize}
+		
+		
+{
+
+				{\setlength{\baselineskip}{1.5\baselineskip}
+				\textit{It gives us great pleasure in presenting the preliminary project report on  \textbf{"Smart Web Based Application using IOT  "} and to express our deep regards towards those who have offered their valuable time and guidance in our hour of need.}
+				
+	\vspace*{.15in}	
+	
+\textit{We would like to take this opportunity to thank our internal guide \textbf{Dr.D.P.GADEKAR}  for giving us all the help and guidance we needed. We are really grateful for her kind support. Her valuable suggestions were very helpful.}
+
+\vspace*{.15in}	
+
+\textit{We are also grateful to \textbf{Dr. D. P. GADEKAR}, Head of Computer Engineering Department, ICOER for his indispensable support, suggestions.}
+
+\vspace*{.15in}	
+
+\textit{We are also glad to express our gratitude and thanks to our Principal \textbf{Dr. D. D. Shah} for his constant inspiration and encouragement.}
+
+\vspace*{.15in}	
+
+\textit{Finally, we would like to express once again our gratitude and thanks to all those who are involved directly and indirectly in achieving our project a success.}
+
+
+%\par}
+
+	
+}
+				\vspace{2.2 in}
+			\flushright
+				\hspace*{1.9 in}Shivkumar S. Hegonde \\
+				\hspace*{1.9 in}Shyam p.Ambilkar \\
+				\hspace*{1.9 in}Rutuja R.Therade \\
+				\hspace*{1.9 in}Surbhi D.Lingamwar \\
+				\hspace*{1.9 in}(B.E. Computer Engg.)
+					
+				
+
+%				\end{quote}
+			}
+		\end{normalsize}
+
+\newpage
+%-----------------------------------Acknowledgement ends--------------------------------
+
+%--------------------------------- Table of \newpage
+%\pagestyle{fancy}
+						
+				\pagestyle{plain}
+					%\pagenumbering{roman}
+					%{\setlength{\baselineskip}{1.5\baselineskip}
+              				
+					\tableofcontents
+			      %\addcontentsline{toc}{section}{Table of Contents}
+			         
+			         \newpage
+			         \pagestyle{plain}
+					%	\pagenumbering{roman}
+			       {\setlength{\baselineskip}{1.5\baselineskip}
+              				
+					\listoffigures
+			      %\addcontentsline{toc}{section}{List of Figures}  
+			         
+			         
+			          \newpage
+			         \pagestyle{plain}
+					%	\pagenumbering{roman}
+			       {\setlength{\baselineskip}{1.5\baselineskip}
+              				
+					\listoftables
+			      %\addcontentsline{toc}{section}{List of Tables}  	         \end{normalsize}
+%\begin{document}
+\newpage
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\fancyhead[CO]{\textit{\lq \lq Smart Campus  An Android And Web Based Application using IOT and NFC Technology \rq \rq}}				
+%Right over part of header
+\fancyhead[RO]{}
+\fancyhead[LO]{}						% Left over part of header
+\renewcommand{\footrulewidth}{0.5pt}	% command to change footer ruler width
+\fancyfoot[RO]{\textit{JSPM's, ICOER, Wagholi, Pune}}							% Right over part of footer
+\fancyfoot[LO]{\textit{Department Of Computer Engineering}}						
+			% Left over part of footer
+			\begin{normalsize}
+			
+			
+\begin{center}
+\begin{huge}
+\section{SYNOPSIS}
+\end{huge}
+\end{center}
+
+
+\subsection{Project Title}
+\hspace*{1cm}{
+Smart Campus  An Android And Web Based Application using IOT and NFC Technology
+}
+
+
+\subsection{Project Guide}
+\hspace*{1cm}{Dr.D.P.Gadekar}
+
+
+\subsection{Technical Keywords (As per ACM Keywords)}
+\begin{itemize}
+{\item Campus Automation
+\item NFC Technology
+\item IOT
+\item Smart Phone Application
+\item Face Recognition
+\item Cloud Computing
+}
+\end{itemize}
+
+\subsection{Problem Statement}
+\hspace*{1cm}{To provide solution for campus from manual documentation and making work digitally using smart phone and IoT.}
+
+\subsection{Abstract}
+\hspace*{1cm}{Researcher in smart campus area is still growing, where every researcher defines the concept of smart campus with less perspective that has not been conical in the same conception of the concept. Education is the one of the basic necessities of every individual. Running a collage with all, students, parents and faculties with complete communication between each other on a single platform will be boon for everyday associated with it. This system considers the basic and primary need of College. The main contribution of smart campus development based on the new advance technology to make easier campus life. Contact less technology provides easy way to enter data when accessing any class room or equipment in the campus. IoT support easier way to report a real time environment status and cloud computing is use to organize various information effectively and provide data service The idea of Smart Campus helps to deal with the present problems faced by schools, campus or educational organization. The Proposed Project carried out the task such as Student Attendance, Marks Report, Smart Teaching, video Surveillance, and Notice and so on. It Improves Quality of education and is efficient of time. This system is carried out using Internet of Things (IoT). This system makes use of Web Application and Android Application which communicate with NFC tags to Perform Campus activities. Cloud computing is used to store information and to communicate with user.  }
+
+\subsection{Goals and Objectives}
+\hspace*{1cm}\textbf{Goals}
+\begin{itemize}
+\item To provide automation for campus activity.
+\item To adopt the trending technology.
+\item To mark the attendance for lecture wirelessly.
+\end{itemize}
+\hspace*{1cm}\textbf{Objectives}
+\begin{itemize}
+\item Provide online interface to college activity.
+\item Increase the security.
+\item Increase efficiency to access record related to college management.
+\item Reduce time required for non-value-added task.
+\end{itemize}
+
+\subsection{Relevant mathematics associated with the Project}
+Let S(be a main set of)=\textbraceleft DB,C,U,S,A,R\textbraceright\\
+where,\\
+DB-database.This database is responsible for storing user information related to user transaction.It also training dataset.\\
+C-set of clients or user i.e.C=\textbraceleft C1,C2,C3.....Cn\textbraceright\\
+U-set containing user based on their type i.e.U=\textbraceleft E,N  \textbraceright
+E-existing user and N is a new user.\\
+S-the server component of the system responsible for registering and authenticating users.\\
+A-set of algorithms used for recommendation.A=\textbraceleft T,CB\textbraceright\\
+R-Result
+
+\subsection{Names of Conferences / Journals where papers can be published}
+
+\begin{itemize}
+\item IEEE/ACM Conference/Journal 1
+\item Conferences/workshops in IITs
+\item Central Universities or SPPU Conferences
+\item IEEE/ACM Conference/Journal 2
+\item IJARCCE  International  Journal  of  Advanced  Research  in  Computer and Communication Engineering
+\item IJCSIT  International  Journal  of  Computer  Science  and  Information Technologies•
+\item IJSART International Journal for Science and Research in Technology
+\end{itemize}
+
+\subsection{Review of Conference/Journal Papers supporting Project idea}
+\begin{itemize}
+\item{\textbf{Title:-}{“A Students Attendance System Using QR Code”,(IJACSA) International Journal of Advanced Computer                 Science and Applications, Vol. 5, No. 3, 2014 }\newline
+\textbf{Author:-}{Fadi Masalha 
+Nael Hirzallah   
+ } \newline
+\textbf{Description:-}{Smartphones are becoming more preferred companions to users than desktops or notebooks. Knowing that smartphones are most popular with users at the age around 26, using smartphones to speed up the process of taking attendance by university instructors would save lecturing time and hence enhance the educational process. This paper proposes a system that is based on a QR code, which is being displayed for students during or at the beginning of each lecture. The students will need to scan the code in order to confirm their attendance. The paper explains the high level implementation details of the proposed system. It also discusses how the system verifies student identity to eliminate false registrations.}}
+
+\item{\textbf{Title:-}{"A Review of Student Attendance System using Near-Field Communication (NFC) Technology }\newline
+\textbf{Author:-}{    Mohd Ameer Hakim bin Mohd Nasir1, Muhammad Hazimuddin bin Asmuni1Norsaremah Salleh1 , Sanjay Misra2, 
+    Andre Bechu} \newline
+\textbf{Description:-}{The rapid growth of system development is no longer subtle and continuously improving today’s system. In education sector, the student attendance system is able to be applied by Near-Field Communication (NFC) technology. NFC can be referred to as a device that can detect information and/or command from a tag by bringing them together in a close proximity or even by touching together. Traditionally, the manual attendance system would require a lecturer to pass around 
+an attendance sheet for students to sign beside their names and another method would require the lecturer to call out the students’ names one by one and register their attendance. The attendance system based on NFC is meant to improve the manual attendance system and therefore the aim of this paper is to review the existing research
+
+}}
+
+\item{\textbf{Title:-}{" A Study on the Cryptographic Algorithm for NFC, Indian Journal of Science and Technology, Vol 9(37), DOI: 10.17485/ijst/2016/v9i37/102543, October 2016}\newline
+\textbf{Author:-}{  Department of Motion Art Design, Namseoul University, 91 Daehak-ro Seonghwan-eup Sebuk-gu Cheonan-si Chungcheongnam-do, 31020, South Korea; heonjunekim@gmail.com } \newline
+\textbf{Description:-}{Currently, NFC leads the mobile payment market. In such a situation, leakage and change of payment information and leakage of personal information by cracking can cause serious social problem. Accordingly, the coding technique used for security of NFC should be safer than now. Methods/Statistical Analysis: Though AES currently used in security of NSF is a safe coding technique, it is not equipped with certifying function
+
+}}
+
+\item{\textbf{Title:-}{Android Based College Campus App}\newline
+\textbf{Author:-}{ Shiv Kumar, Shrawan kumar Sharma and Divya Dagwar
+2018 Second International Conference on Computing Methodologies and Communication (ICCMC)
+ } \newline
+\textbf{Description:-}{Technology has changed our daily life routine as well as living style. So, student of school or colleges or university require application that supports smart phone to get all type of information related to examination, lecture notes, placement regarding question, notification, events, transportation etc. instead of calling system because almost all mobile users has smart phone now days. Each and every educational institute provides limited services to their users including students, parents, guardian and public. If provided services are more than ease of using is very difficult. That is why students interest towards using college or school or university is decreasing day by day. We designed an application to fulfil the requirement of students or parents or employee based on present scenario of market and latest technology like java, android, GPS etc. to solve the students' problem.}}
+
+\end{itemize}
+
+\newpage
+\subsection{Plan of Project Execution:-}
+\begin{center}
+\begin{figure}[h]
+\centering
+			\includegraphics[width=10cm]{execution-plan.png}
+				\caption{Execution Plan}
+			
+		\end{figure}
+		\end{center}
+\newpage
+\begin{center}
+\begin{huge}
+\section{TECHNICAL KEYWORDS}
+\end{huge}
+\end{center}
+
+\subsection{Area of project}
+\textbf{Internet Of Thing(IoT)}\newline
+\hspace*{0.3cm}
+{The Internet of things (IoT) is the network of physical devices, vehicles, and other items embedded with electronics, software, sensors, actuators, and network connectivity which enable these objects to collect and exchange data.}
+\paragraph{}{The IoT allows objects to be sensed or controlled remotely across existing network infrastructure,creating opportunities for more direct integration of the physical world into computer-based systems, and resulting in improved efficiency, accuracy and economic benefit in addition to reduced human intervention.When IoT is augmented with sensors and actuators, the technology becomes an instance of the more general class of cyber-physical systems, which also encompasses technologies such as smart grids, virtual power plants, smart homes, intelligent transportation and smart cities. Each thing is uniquely identifiable through its embedded computing system but is able to interoperate within the existing Internet infrastructure. Experts estimate that the IoT will consist of about 30 billion objects by 2020.}
+\paragraph{}
+{Typically, IoT is expected to offer advanced connectivity of devices, systems, and services that goes beyond machine-to-machine (M2M) communications and covers a variety of protocols, domains, and applications.The interconnection of these embedded devices (including smart objects), is expected to usher in automation in nearly all fields, while also enabling advanced applications like a smart grid,and expanding to areas such as smart cities.}
+\paragraph{}
+{"Things", in the IoT sense, can refer to a wide variety of devices such as heart monitoring implants, biochip transponders on farm animals, cameras streaming live feeds of wild animals in coastal waters,automobiles with built-in sensors, DNA analysis devices for environmental/food/pathogen monitoring,or field operation devices that assist firefighters in search and rescue operations.Legal scholars suggest regarding "things" as an "inextricable mixture of hardware, software, data and service".}
+
+\subsection{Technical Keywords (As per ACM Keywords)}
+Please note ACM Keywords can be found : http://www.acm.org/about/class/ccs98-
+html
+\begin{itemize}
+{\item Smart Learning
+\item QR-code Technology
+\item Device to device communication
+\item Smart Phone and web Application
+\item Device to device communication
+}
+\end{itemize}
+
+\newpage
+\begin{center}
+\begin{huge}
+\section{INTRODUCTION}
+\end{huge}
+\end{center}
+\subsection{Project Idea}
+\hspace*{0.3cm}
+ The idea of “Smart Campus ” came out recent attention given to ‘smart cities’ world over and also  with  GoI  announcing  the  development  of  100  smart  cities  which  essentially  are  aimed  at deployment  of  internet  based  applications,  content  management  platforms  and  broadband infrastructures  in  every  sphere  of  public  systems  (such  as  healthcare,  media,  energy  and  the environment, safety, and public services). \newline 
+Academic campuses, essentially for people who are expected to be engaged in intellectual progress, knowledge creation and guiding societies for better living, could also embody principles of a smart campus. A typical smart campus would have three pillars: infrastructure, operations and, of course, people. Each of these pillars would be infused with intelligence, but  more importantly they would work in an interconnected and integrated fashion to utilise resources efficiently. Such a campus could incorporate the ‘Future of Internet’ involving Internet of Things and sensor technologies as the main facilitators of smart infrastructure.\\
+\begin{itemize}
+\item Some of the key features of such a smart campus are: 
+\begin{itemize}
+\item Smart technology enabled automation 
+\item  Integrated services via dashboards  
+\item  Energy and water efficiency (Smart distribution systems, smart meters, etc) 
+\item  Foster creativity and innovation via collaboration 
+\item  Results in best practices 
+\end{itemize}
+\end{itemize}
+
+\subsection{Motivation}
+\begin{itemize}
+\item Developing an application for student, staff, HOD and admin to efficiently using college facilities. 
+\begin{itemize}
+\item Day by day increase in manual work.
+\item The need of an advanced system to serve the purpose for automation.
+\item This device is an answer to all student and management work.
+\end{itemize}
+\end{itemize}
+
+\subsection{Literature Survey}
+
+\begin{itemize}
+\item{\textbf{Title:-}{“A Students Attendance System Using QR Code”,(IJACSA) International Journal of Advanced Computer                 Science and Applications, Vol. 5, No. 3, 2014 }\newline
+\textbf{Author:-}{Fadi Masalha 
+Nael Hirzallah   
+ } \newline
+\textbf{Description:-}{Smartphones are becoming more preferred companions to users than desktops or notebooks. Knowing that smartphones are most popular with users at the age around 26, using smartphones to speed up the process of taking attendance by university instructors would save lecturing time and hence enhance the educational process. This paper proposes a system that is based on a QR code, which is being displayed for students during or at the beginning of each lecture. The students will need to scan the code in order to confirm their attendance. The paper explains the high level implementation details of the proposed system. It also discusses how the system verifies student identity to eliminate false registrations.}}
+
+\item{\textbf{Title:-}{"A Review of Student Attendance System using Near-Field Communication (NFC) Technology }\newline
+\textbf{Author:-}{    Mohd Ameer Hakim bin Mohd Nasir1, Muhammad Hazimuddin bin Asmuni1Norsaremah Salleh1 , Sanjay Misra2, 
+    Andre Bechu} \newline
+\textbf{Description:-}{The rapid growth of system development is no longer subtle and continuously improving today’s system. In education sector, the student attendance system is able to be applied by Near-Field Communication (NFC) technology. NFC can be referred to as a device that can detect information and/or command from a tag by bringing them together in a close proximity or even by touching together. Traditionally, the manual attendance system would require a lecturer to pass around 
+an attendance sheet for students to sign beside their names and another method would require the lecturer to call out the students’ names one by one and register their attendance. The attendance system based on NFC is meant to improve the manual attendance system and therefore the aim of this paper is to review the existing research
+
+}}
+
+\item{\textbf{Title:-}{" A Study on the Cryptographic Algorithm for NFC, Indian Journal of Science and Technology, Vol 9(37), DOI: 10.17485/ijst/2016/v9i37/102543, October 2016}\newline
+\textbf{Author:-}{  Department of Motion Art Design, Namseoul University, 91 Daehak-ro Seonghwan-eup Sebuk-gu Cheonan-si Chungcheongnam-do, 31020, South Korea; heonjunekim@gmail.com } \newline
+\textbf{Description:-}{Currently, NFC leads the mobile payment market. In such a situation, leakage and change of payment information and leakage of personal information by cracking can cause serious social problem. Accordingly, the coding technique used for security of NFC should be safer than now. Methods/Statistical Analysis: Though AES currently used in security of NSF is a safe coding technique, it is not equipped with certifying function
+
+}}
+
+\item{\textbf{Title:-}{Android Based College Campus App}\newline
+\textbf{Author:-}{ Shiv Kumar, Shrawan kumar Sharma and Divya Dagwar
+2018 Second International Conference on Computing Methodologies and Communication (ICCMC)
+ } \newline
+\textbf{Description:-}{Technology has changed our daily life routine as well as living style. So, student of school or colleges or university require application that supports smart phone to get all type of information related to examination, lecture notes, placement regarding question, notification, events, transportation etc. instead of calling system because almost all mobile users has smart phone now days. Each and every educational institute provides limited services to their users including students, parents, guardian and public. If provided services are more than ease of using is very difficult. That is why students interest towards using college or school or university is decreasing day by day. We designed an application to fulfil the requirement of students or parents or employee based on present scenario of market and latest technology like java, android, GPS etc. to solve the students' problem.}}
+
+\end{itemize}
+
+
+
+\newpage
+\begin{center}
+\begin{huge}
+\section{PROBLEM DEFINITION AND SCOPE}
+\end{huge}
+\end{center}
+\subsection{Problem Statement}
+\textbf{To provide solution for campus from manual documentation  and  making  work digitally  using smart phone and IoT.}
+\subsubsection{Goals and objectives}
+\hspace*{1cm}\textbf{Goals}
+\begin{itemize}
+\item To Reduce paper work.
+\item To provide Real Time Access
+\item To provide Security
+\end{itemize}
+\hspace*{1cm}\textbf{Objectives}
+\begin{itemize}
+\item Providing the online app and web interface for students, faculty and parent.
+\item Increasing the efficiency of college record management.
+\item Decrease time required to access and circulate notices..
+\item To make the system more secure.
+\item Decrease time spent on non-value added tasks.
+\end{itemize}
+
+\subsubsection{Statement of scope}
+\hspace*{0.3cm}
+{This system is based on building a system for college campus. The system will help teachers to manage student’s activities, Administrators to handle college digitally.
+}
+
+\subsection{Software Context}
+\begin{itemize}
+\item Android studio, JDK
+\item Windows, Linux
+\item NFC
+\item Cyptographic tools
+\end{itemize}
+
+
+\subsection{Major Constraints}
+\begin{itemize}
+\item Determining the exact specific opinion about dairy products.
+\item Creating user oriented system to effectively mine and extract all the data to help the user.
+\item Result representation.
+\end{itemize}
+
+
+\subsection{Methodologies of Problem solving and efficiency issues}
+\begin{itemize}
+\item The single problem can be solved by different solutions.  This considers the performance parameters for each approach. Thus considers the efficiency issues.
+\item We can use a divide and conquer approach for our problem.
+\item Divide and conquer strategy works better than a traditional linear approach, it also requires a distributed or multi-core environment.
+\end{itemize}
+
+\subsection{Scenario in which multi-core, Embedded and Distributed Computing used}
+\hspace*{0.3cm}Client-server relationship exists in our Android Web Based application .Here Client is front end of the system Back end of the system is the server (database).User interacts through GUI and user queries are taken. Whereas server processes these user queries and generates result by using appropriate algorithm and sends the data to various users.
+
+
+\subsection{Outcome}
+\begin{itemize}
+\item  Student across the College Campus will get the notification  regarding College Or Campus
+\item	A attendace of student will be mark accurately and this automatic process will save Time. 
+\item	Identification of student sitting in library will be verified.
+\end{itemize}
+
+
+\subsection{Applications}
+\begin{itemize}
+\item Real time usage to achieve Automation In Campus.
+\item Interactive information exchange on the users. 
+\end{itemize}
+
+\subsection{Hardware Resources Required}
+\begin{itemize}
+\item Hardware
+\begin{enumerate}
+\item RAM : 4GB for faster processing 
+\item CPU : 2GHz for sufficient processing power
+\item NFC reader and tag.
+\item Camera
+\end{enumerate}
+\end{itemize}
+
+\subsection{Software Resources Required}
+\begin{enumerate}
+\item Platform : Android Studio, Arduino, MySQL workbench, Eclipse
+\item Operating System:  Windows 7
+\item Programming Language : Java, XML,embedeb C
+\item Framework : JSP , ANDROID,Python
+\end{enumerate}
+
+\newpage
+\begin{center}
+\begin{huge}
+\section{Project Plan}
+\end{huge}
+\end{center}
+
+\subsection{Project Estimates}
+\subsubsection{Reconciled Estimates}
+\begin{itemize}
+\item {Cost estimates}
+\begin{enumerate}
+\item IDE - Free
+\item Hardware and software cost 
+
+\end{enumerate}
+\end{itemize}
+\begin{table}[hbtp]
+\begin{center}
+\begin{tabular}{|p{200pt}|p{100pt} |}
+\hline
+ARDUINO & 2500 \\ \hline
+NFC READER& 900 \\ \hline
+NFC TAG & 500 \\ \hline
+CAMERA & 2500 \\ \hline
+TOTAL & 6400 \\
+\hline
+
+\end{tabular}
+\end{center}
+\end{table}
+\begin{itemize}
+\item {Time Estimates}
+\begin{table}[hbtp]
+\begin{center}
+\begin{tabular}{|p{200pt}|p{100pt} |}
+\hline
+Procedure & Time \\ \hline
+Literature Research & 15 days \\ \hline 
+System Analysis & 30 days \\ \hline
+Design and Planning and Database & 30 days \\ \hline 
+Learning Required Technologies & 30 days \\ \hline 
+Implementation & 31 days \\ \hline 
+System Testing & 27 days  \\ \hline
+Initial Report & 15 days \\ \hline
+Final Report & 16 days\\ 
+
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{itemize}
+\subsubsection{Project Resources}
+\begin{table}[hbtp]
+\begin{center}
+\begin{tabular}{|p{15pt}|p{137pt} | p{137pt} |}
+\hline
+{ID} & {Name of Person}	& {Responsibility} \\ \hline
+1 & Dr.D.P.Gadekar & Project Guide\\
+\hline
+2 & Shivkumar Hegonde & Developer \\
+\hline
+3 & Shyam Ambilkar & Developer \\
+\hline
+4 & Rutuja Therade& Developer \\
+\hline
+5 & Surbhi Lingamwar & Developer \\
+\hline 
+\end{tabular}
+\end{center}
+%\caption{Risk Table}
+%\label{tab:risk}
+\end{table}
+
+\begin{itemize}
+\item Hardware
+\begin{enumerate}
+\item RAM : 4GB for faster processing 
+\item CPU : 2GHz for sufficient processing power
+\item Arduino / Raspberry Pie
+\item  Camera, NFC Reader, NFC Tags.
+\end{enumerate}
+\end{itemize}
+
+\begin{itemize}
+\item Software
+\begin{enumerate}
+\item Platform : Android Studio, Arduino, MySQL Workbench, Eclipse
+\item Operating System:  : Linux Platform(Ubuntu 14.04)
+\item Programming Language : Java, Python
+\item Framework : Flask, Django, React, JSP.
+
+
+\end{enumerate}
+\end{itemize}
+
+\subsection{Risk Management with respect to NP Hard canalysis}
+\hspace*{0.3cm}Risk is a possibility of loss or injury.Risk management is the identification assessment and prioritization of risks followed by coordinated and economical application of resources to minimize and control that would probability and impact of unfortunate events or to maximise the realization of opportunities.
+Risk can come from uncertainty in financial markets, project failures (at any phase in design, development, production and sustainment life cycles), legal liabilities, credit risks, accidents, natural causes and disasters as well deliberate attack from an advisory of uncertain and unpredictable cause.
+
+Using risk management techniques we alleviate the harm or laws n software project or risk cannot be avoid but by perform in risk management we can attempt to ensure that right risks are taken at right time.
+Risk taking is essential to progress and failure is often key part of learning.
+
+\subsubsection{Risk Identification}
+\hspace*{0.3cm}Our development identified some potential risks to the project. These risks were analyzed and were classified into various categories depending upon the threat they posed to the project. Some of these risks were ‘generic risks’ while others were ‘product specific risks’. A considerable amount of time was spent in analyzing the product specific risks.
+
+\begin{enumerate}
+\item Have top software and customer managers formally committed to support the project?
+ 	\begin{itemize} \item The software manager and the customer mangers are fully committed to the project \end{itemize}
+\item Are end-users enthusiastically committed to the project and the system/product to be built?
+\begin{itemize} \item The end-users have also committed to the project and to the product to be built \end{itemize}
+\item Are requirements fully understood by the software engineering team and its customers?
+\begin{itemize} \item  Requirements for citizens are fully understood by whole team from consistent feedback of citizens \end{itemize}
+\item Have customers been involved fully in the definition of requirements?
+\begin{itemize} \item  Yes, citizens have been fully consulted and are involved in the process.\end{itemize}
+\item Do end-users have realistic expectations? 
+\begin{itemize} \item  End users tend to have some unrealistic expectations, typically, on the various features of the product to be quickly delivered in a constrained manner. \end{itemize}
+\item Does the software engineering team have the right mix of skills?
+\begin{itemize} \item  The team consists of the people with Managerial, Designing as well as Developing skill set. \end{itemize}
+\item Are project requirements stable?
+	\begin{itemize} \item  Project requirements are stable \end{itemize}
+\item Is the number of people on the project team adequate to do the job?
+\begin{itemize} \item  Number of people to do the job, are adequate, but interns may be necessary as the users grow in size. \end{itemize}
+\item Do all customer/user constituencies agree on the importance of the project and on the requirements for the system/product to be built?
+\begin{itemize} \item  Citizens have consistently agreed on the parameters of the project and its feasibility, and of the requirements for product to be built effectively. \end{itemize}
+\end{enumerate}
+
+\subsubsection{Risk Analysis}
+\hspace*{0.3cm}The risks for the Project can be analyzed within the constraints of time and quality
+\begin{table}[hbtp]
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{| c | c | c | c | c | c | c | }
+\hline
+{ID} & {Risk Description}	& {Probability} & {Impact} 	& {Quality}	& {Overal}l \\ \hline
+1	& Usage of Product	& Low	& Low	& High	& High \\ \hline
+2	& Financial Requirement	& Med	& Med	& High	& High \\ \hline
+\end{tabular}
+\end{center}
+\caption{Risk Table}
+\label{tab:risk}
+\end{table}
+
+\subsubsection{Overview of Risk Mitigation, Monitoring, Management}
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{|c|c|}
+\hline 
+Risk ID & 1 \\ 
+\hline 
+Risk Discription & Errors Aries due to NFC’s tag data \\ 
+\hline 
+Category & End User’s Environment \\ 
+\hline 
+Source & Noisy Data collected by sensors \\ 
+\hline 
+Probability & Medium \\ 
+\hline 
+Impact & Medium \\ 
+\hline 
+Response & Mitigate \\ 
+\hline 
+Strategy & NFC tag will resolve the issue\\ 
+\hline 
+Risk Status & Identified \\ 
+\hline
+\end{tabular} 
+\end{center}
+
+
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{|c|c|}
+\hline 
+Risk ID & 2 \\ 
+\hline 
+Risk Discription &    Database Maintenance \\ 
+\hline 
+Category & Development Environment \\ 
+\hline 
+Source & Registration of users \\ 
+\hline 
+Probability & Medium \\ 
+\hline 
+Impact & High \\ 
+\hline 
+Response & Serious \\ 
+\hline 
+Strategy & Access Control Methods are used \\ 
+\hline 
+Risk Status & Identified \\ 
+\hline 
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{|c|c|}
+\hline 
+Risk ID & 3 \\ 
+\hline 
+Risk Description & End  User's Satisfaction \\ 
+\hline 
+Category & End User's Environment \\ 
+\hline 
+Source & During the actual use of the system \\ 
+\hline 
+Probability & High \\ 
+\hline 
+Impact & High \\ 
+\hline 
+Response & Seriouse \\ 
+\hline 
+Strategy & Maintenacne of user's Req.\\ 
+\hline 
+Risk Status & Identified \\ 
+\hline 
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{|c|c|}
+\hline 
+Risk ID & 4 \\ 
+\hline 
+Risk Discription & Knowledge of software developers \\ 
+\hline 
+Category & Implementation Environment \\ 
+\hline 
+Source & Software Developer \\ 
+\hline 
+Probability & Low \\ 
+\hline 
+Imapct & High \\ 
+\hline 
+Response & Mitigate \\ 
+\hline 
+Strategy & Training to the Software Engineers\\ 
+\hline 
+Risk Status & Identified \\ 
+\hline 
+\end{tabular}
+\end{center}
+
+\begin{center}
+%\def\arraystretch{1.5}
+\def\arraystretch{1.5}
+\begin{tabular}{| c | c |}
+\hline 
+Risk ID	& 5 \\ \hline
+Risk Description	& Low Acceptability and Usage \\ \hline
+Category	& User Base Generation \\ \hline
+Source	& S/W req. Specification document. \\ \hline
+Probability	& Medium \\ \hline
+Impact	& High \\ \hline
+Response	& Group for quick boost \\ \hline
+Strategy	& Endorsement and Advertising \\ \hline
+Risk Status	& May Occur \\ \hline
+\end{tabular}
+\end{center}
+%\caption{Risk Impact definitions \cite{bookPressman}}
+\label{tab:risk1}
+
+
+\begin{center}
+%\def\arraystretch{1.5}
+\def\arraystretch{1.9}
+\begin{tabular}{| c | c |}
+\hline 
+Risk ID	& 6 \\ \hline
+Risk Description	& User Base not using the product \\ \hline
+Category	& User Base  \\ \hline
+Source	& Software Design Specification. \\ \hline
+Probability	& Low \\ \hline
+Impact	& High \\ \hline
+Response	& Adding new features consistently \\ \hline
+Strategy	& Advertising in the  Newspapers, Journals  \\ \hline
+Risk Status	& May Occur \\ \hline
+\end{tabular}
+\end{center}
+\label{tab:risk2}
+
+\subsection{Project Schedule}  
+\subsubsection{Project task set}
+\hspace*{0.3cm} Project scheduling is a mechanism to communicate what tasks need to get done and which organizational resources will be allocated to complete those tasks in what timeframe. A project schedule is a document collecting all the work needed to deliver the project on time.  \\
+ \hspace*{0.3cm}A project is made up of many tasks, and each task is given a start and end (or due date), so it can be completed on time. Likewise, people have different schedules, and their availability and vacation or leave dates need to be documented in order to successfully plan those tasks.\\
+
+
+
+Major Tasks in the Project stages are:
+\begin{itemize}
+\item Task 1: Literature Research
+\item Task 2: System Analysis
+\item Task 3: Design \& Planning and Data-set
+\item Task 4: Learning Required Technologies
+\item Task 5: Implementation
+\item Task 6: System Testing
+\item Task 7: Initial Report
+\item Task 8: Final Report
+\end{itemize}
+\newpage
+\subsubsection{Task Network}
+\begin{center}
+	  \begin{figure}[h]
+			\centering
+			\includegraphics[width=10cm]{tasknetwork.png}
+			\caption{Task Network}
+		\end{figure}
+	\end{center}		
+\subsubsection{Timeline Chart}
+\vspace{0.3 in}
+\begin{center}
+\begin{figure}[h]
+\centering
+			\includegraphics[width=26cm]{Timelinesc.png}
+			
+		\end{figure}
+		\end{center}
+
+
+
+ \newpage
+\subsection{Team Organization}
+\begin{table}[hbtp]
+\begin{center}
+\begin{tabular}{|p{30pt}|p{100pt} | p{200pt} |}
+\hline
+{Sr. No.} & Design/Develop & Name of Designers/Developers \\
+\hline
+1 & Design & \begin{enumerate}
+\item Shivkumar Hegonde \item Rutuja Therade
+\item Surbhi Lingamwar
+\end{enumerate} \\
+\hline
+2 & Backend & \begin{enumerate}
+\item Shivkumar Hegonde \item Rutuja Therade \item  Shyam Ambilkar 
+\end{enumerate}\\ \hline 
+3 & Front end &\begin{enumerate}
+\item Rutuja Therade \item  Surbhi Lingamwar \item Shyam Ambilkar
+\end{enumerate}\\ \hline
+4 & Documentation & \begin{enumerate}
+\item Shivkumar Hegonde \item Shyam Ambilkar \item Rutuja Therade
+\end{enumerate} \\ \hline
+5 & Testing &\begin{enumerate}
+\item Shivkumar Hegonde \item  Surbhi Lingamwar \item Shyam Ambilkar
+\end{enumerate}\\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\newpage
+\begin{center}
+\begin{huge}
+\section{Software Requirement Specification}
+\end{huge}
+\end{center}
+\subsection{Introduction}
+\subsubsection{Purpose and Scope of Document}
+\begin{itemize}
+\item \textbf{Purpose :}
+A software requirements specification (SRS) is a description of a software system to be developed, laying out function and non-function requirements, and may include a set of use cases that describe interaction the users will have with the software.
+Software requirement specification establishes the basis for an agreement between customer and contractor or suppliers (in market-driven projects, these roles may be played by the marketing and development division) on do. Software requirement specification permits a rigorous assessment of requirements before design can begin and reduces later redesign. It should also provide a realistic basis for estimating product costs, risks, and schedules. 
+\item \textbf{Scope :}
+The software requirement specification document enlists enough and necessary requirements that are required for the project development. To derive the requirements we need to have clear and thorough understanding of products to be developed or being develop.This is achieved refined with detailed and continuous communication with the project team and customer till the completion of the software.the SRS may be one of a contract deliverable Data item Description or have other forms of organizationally mandated content.
+\end{itemize}
+
+\subsubsection{Overview of responsibilities of Developer}
+The following activities are carried out:
+\begin{itemize}
+\item Design : Shivkumar Hegonde,Rutuja Therade,Surbhi lingamwar 
+\item Backend : Shivkumar Hegonde,Rutuja Therade,Shyam Ambilkar 
+\item Front end : Rutuja Therade,Surbhi gamwar, Shyam Ambilkar
+\item Documentation :Shivkumar Hegonde, Rutuja Therade, Shyam Ambilkar
+\item Testing : Shivkumar Hegonde, Surbhi lingamwar, Shyam Ambilkar
+
+
+\end{itemize}
+
+
+\subsection{Usage Scenario}
+This section provides various usage scenarios for the system to be developed. 
+\begin{itemize}
+\item Gathering opinion from databases
+\item Organizing Information
+
+\end{itemize}
+ \subsubsection{User profiles}  
+The profiles of all user categories are described here.(Actors and their Description)
+\begin{itemize}
+\item Teaching and Non-Teaching Staff
+\item Administrator
+\item Students
+
+\end{itemize}
+
+\newpage
+\subsubsection{Use Case Diagram}
+
+
+\begin{center}
+	  \begin{figure}[h]
+			\centering
+			\includegraphics[width=15cm]{scusecase.png}
+			\caption{Use Case}
+		\end{figure}
+	\end{center}	
+
+
+
+
+
+\subsection{Data Model and Description}  
+\subsubsection{Data Description}  
+\hspace*{0.3cm}Data objects that will be managed/manipulated by the software are described in this section. The database entities or files or data structures  required to be described. For data objects details can be given as below
+\begin{itemize}
+\item Queries
+\item Processing 
+\item Processed
+\item Result
+\end{itemize}
+\subsubsection{Data objects and Relationships}
+\hspace*{0.3cm}  Data objects and their major attributes and relationships among data objects are described using an ERD- like form.
+\subsection{Functional Model and Description}  
+\hspace*{0.3cm}A description of each major software function, along with data flow (structured analysis) or class hierarchy (Analysis Class diagram with class description for object oriented system) is presented.
+\subsubsection{Data Flow Diagram}  
+\begin{itemize}
+\item Data Flow Diagram 
+\begin{center}
+	  \begin{figure}[h]
+			\centering
+			\includegraphics[width=15cm]{scDFD1.png}
+			\caption{DataFlow Diagram}
+		\end{figure}
+	\end{center}
+
+
+\end{itemize}
+
+\subsubsection{Data Flow Diagram}  
+\begin{itemize}
+\item Data Flow Diagram 
+\begin{center}
+	  \begin{figure}[h]
+			\centering
+			\includegraphics[width=15cm]{scDFD2.png}
+			\caption{DataFlow Diagram}
+		\end{figure}
+	\end{center}
+
+
+\end{itemize}
+
+\newpage
+\subsubsection{Activity Diagram:}
+\begin{figure}[h]
+			\centering
+			\includegraphics[width=7.2cm]{scActivity1.png}
+			\caption{Activity Diagram}
+		\end{figure}
+
+\subsubsection{Activity Diagram:}  
+
+
+\begin{center}
+	  \begin{figure}[h]
+			\centering
+			\includegraphics[width=7.2cm]{scActivity2.png}
+			\caption{Activity Diagram}
+		\end{figure}
+	\end{center}
+
+
+
+\newpage
+\subsubsection{Non Functional Requirements:}
+\begin{itemize}
+	\item	\textbf{Interface Requirements: } The interface should be easy to use and intuitive.
+	\item	\textbf{Performance Requirements: } The system should give an effective and high performance.
+    \item	\textbf{Software quality attributes: } Availability, Reliability, Re-usability, Scalability, Performance, Usability
+    
+    	The system considers following non-functional requirements to provide better functionalities and usage of system.
+\newline •	\textbf{Usability:} The system is designed keeping in mind the usability issues considering the end-users who are developers/programmers. Effort required in learning, operating, preparing input, and interpreting output are to be minimized. It provides detailed help which would lead to better and faster learning. Navigation of system is easy.
+\newline •	\textbf{Agility: }Improves with users able to rapidly and inexpensively re-provision technological infrastructure resources. The cost of overall computing is unchanged, however, and the providers will merely absorb up-front costs and spread costs over a longer period.
+\newline •	\textbf{Consistency:} Uniformity in layout, screens, colors scheme, via dynamic ("on-demand") provisioning of resources on a fine-grained, self service basis near real-time, without users having to engineer for peak loads.
+\newline •	\textbf{Performance:} Performance depends on the user’s familiarity with the usage of the system.
+\newline •	\textbf{Extendability:} Templates can be imported from different applications, adding more features in workflow.   
+\newline •	\textbf{Reusability:} The native files provided in the system can be used any number of times for faster execution. New native files can be created and saved which again can be made available. Since the application is network host based, it can be used anywhere anytime by a single user.
+\newline •	\textbf{Reliability:} Protection of data from malicious attack and unauthorized access. Improves through the use of multiple redundant sites, which makes mobile agents suitable for business continuity and disaster recovery.
+
+\end{itemize} 
+
+\subsubsection{State Diagram:}	
+  State Transition Diagram:\\
+\hspace*{0.3cm}The states are represented in ovals and state of system gets changed when certain events occur. The transitions from one state to the other are represented by arrows. The Figure    shows important states and events that occur while creating new project.
+
+\subsubsection{Design Constraints}	
+\hspace*{0.3cm}Any design constraints that will impact the subsystem are noted. There is a necessity to study design patterns in detail. Depending upon the various kinds of patterns available, different design constraints may be encountered such as supporting multiple operating systems which may not be possible due to using the .NET framework. The schedule is tight and deadlines prove a reasonable constraint while adding features.
+
+ \subsubsection{Software Interface Description}	 
+\hspace*{0.3cm}The interface must be easy to understand and use. It must be intuitive and explain the use at a glance. The software also needs to interface with existing search engines. This will be handled using an API or a web scraper.
+
+\newpage
+\begin{center}
+\begin{huge}
+\section{Detailed Design Document}
+\end{huge}
+\end{center}
+ \subsection{Introduction}  
+This document specifies the design that is used to solve the problem of Product.  
+\subsection{Architectural Design}  
+	A description of the program architecture is presented.\\ 
+\begin{figure}[h]
+			\centering
+			\includegraphics[width=15cm]{scArchitecture.png}
+			\caption{Architecture}
+		\end{figure}
+
+\newpage
+\subsection{Data design}   
+\hspace*{0.3cm}A description of all data structures including internal, global, and , database design (tables), file formats.
+\subsubsection{Internal software data structure}
+\begin{itemize}
+\item Android based
+\end{itemize}
+\subsubsection{Global data structure}
+\hspace*{0.3cm}Data structured that are available to major portions of the architecture are described.
+\begin{itemize}
+\item Android Based
+\end{itemize}
+
+\subsubsection{Database description}
+
+\hspace*{0.3cm}The database will be used to store user details.
+
+\subsection{Component Design} 
+\subsubsection{Class Diagram}
+\hspace*{0.3cm} Class diagrams are the most common diagrams used in UML. Class diagram is main building block of any object oriented solution.It shows the classes in system, attributes and operations of each class and the relationship between each class.Class diagrams are static in nature.
+
+\begin{center}
+	  \begin{figure}[h]
+			\centering
+\includegraphics[width=12 cm]{scclassdiagram.png}
+			\caption{Class Diagram}
+		\end{figure}
+	\end{center}
+
+\subsection{Project Implementation}
+  \subsubsection{Tools and Technologies Used}
+  \begin{enumerate}
+\item \textbf{Eclipse IDE:}\\
+\hspace*{0.3cm}Eclipse was inspired by the Smalltalk-based VisualAge family of integrated development environment (IDE) products.Although fairly successful, a major drawback of the VisualAge products was that developed code was not in a component model; instead, all code for a project was held in a compressed lump (somewhat like a zip file but in a proprietary format called .dat); individual classes could not be easily accessed, certainly not outside the tool. A team primarily at the IBM Cary NC lab developed the new product as a Java-based replacement. In November 2001, a consortium was formed with a board of stewards to further the development of Eclipse as open-source software. It is estimated that IBM had already invested close to \$40 million by that time. The original members were Borland, IBM, Merant, QNX Software Systems, Rational Software, Red Hat, SuSE, TogetherSoft and WebGain.The number of stewards increased to over 80 by the end of 2003. In January 2004, the Eclipse Foundation was created.
+Eclipse 3.0 (released on 21 June 2004) selected the OSGi Service Platform specifications as the runtime architecture.The Association for Computing Machinery recognized Eclipse with the 2011 ACM Software Systems Award on 26 April 2012  
+\hspace*{0.3cm}In computer programming, Eclipse is an integrated development environment (IDE). It contains a base workspace and an extensible plug-in system for customizing the environment. Eclipse is written mostly in Java and its primary use is for developing Java applications, but it may also be used to develop applications in other programming languages through the use of plugins, including: Ada, ABAP, C, C++, COBOL, Fortran, Haskell, JavaScript, Julia, Lasso, Lua, NATURAL, Perl, PHP, Prolog, Python, R, Ruby (including Ruby on Rails framework), Rust, Scala, Clojure, Groovy, Scheme, and Erlang. It can also be used to develop packages for the software Mathematica. Development environments include the Eclipse Java development tools (JDT) for Java and Scala, Eclipse CDT for C/C++ and Eclipse PDT for PHP, among others.\\
+\hspace*{0.3cm}The initial codebase originated from IBM VisualAge.] The Eclipse software development kit (SDK), which includes the Java development tools, is meant for Java developers. Users can extend its abilities by installing plug-ins written for the Eclipse Platform, such as development toolkits for other programming languages, and can write and contribute their own plug-in modules.\\
+\hspace*{0.3cm}Released under the terms of the Eclipse Public License, Eclipse SDK is free and open-source software (although it is incompatible with the GNU General Public License. It was one of the first IDEs to run under GNU Classpath and it runs without problems under IcedTea  \\
+  
+
+\item \textbf{Apache Tomcat:}\\
+\hspace*{0.3cm}Tomcat started off as a servlet reference implementation by James Duncan Davidson, a software architect at Sun Microsystems. He later helped make the project open source and played a key role in its donation by Sun Microsystems to the Apache Software Foundation. The Apache Ant software build automation tool was developed as a side-effect of the creation of Tomcat as an open source project.\\
+\hspace*{0.3cm}Davidson had initially hoped that the project would become open sourced and, since many open source projects had O'Reilly books associated with them featuring an animal on the cover, he wanted to name the project after an animal. He came up with Tomcat since he reasoned the animal represented something that could fend for itself. Although the tomcat was already in use for another O'Reilly title, his wish to see an animal cover eventually came true when O'Reilly published their Tomcat book with a snow leopard on the cover in 2003
+Apache Tomcat, often referred to as Tomcat, is an open-source web server developed by the Apache Software Foundation (ASF). Tomcat implements several Java EE specifications including Java Servlet, JavaServer Pages (JSP), Java EL, and WebSocket, and provides a "pure Java" HTTP web server environment for Java code to run .\\
+
+
+
+\item \textbf{Java Servlet:}\\
+\hspace*{0.3cm}A Java servlet is a Java program that extends the capabilities of a server. Although servlets can respond to any types of requests, they most commonly implement applications hosted on Web servers. Such Web servlets are the Java counterpart to other dynamic Web content technologies such as PHP and ASP.NET.
+
+\hspace*{0.3cm}Servlets are most often used to process or store a Java class in Java EE that conforms to the Java Servlet API, a standard for implementing Java classes which respond to requests. Servlets could in principle communicate over any client–server protocol, but they are most often used with the HTTP protocol. Thus "servlet" is often used as shorthand for "HTTP servlet".Thus, a software developer may use a servlet to add dynamic content to a web server using the Java platform. The generated content is commonly HTML, but may be other data such as XML. Servlets can maintain state in session variables across many server transactions by using HTTP cookies, or rewriting URLs.
+
+\item \textbf{Java:}\\
+\hspace*{0.3cm}Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture. As of 2016, Java is one of the most popular programming languages in use, particularly for client-server web applications, with a reported 9 million developers. Java was originally developed by James Gosling at Sun Microsystems (which has since been acquired by Oracle Corporation) and released in 1995 as a core component of Sun Microsystems' Java platform. The language derives much of its syntax from C and C++, but it has fewer low-level facilities than either of them.\\
+\hspace*{0.3cm}The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary licences. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under the GNU General Public License. Others have also developed alternative implementations of these Sun technologies, such as the GNU Compiler for Java (bytecode compiler), GNU Classpath (standard libraries), and IcedTea-Web (browser plugin for applets).
+The latest version is Java 8, which is the only version currently supported for free by Oracle, although earlier versions are supported both by Oracle and other companies on a commercial basis.
+
+\item \textbf{Python:}\\
+\hspace*{0.3cm}Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales.[26] In July 2018, Van Rossum stepped down as the leader in the language community. Python features a dynamic type system and automatic memory management. It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library. Python interpreters are available for many operating systems. CPython, the reference implementation of Python, is open source software and has a community-based development model, as do nearly all of Python's other implementations. Python and C, Python are managed by the non-profit Python Software Foundation
+\end{enumerate}
+\newpage
+\subsection{Software Testing}
+\hspace*{0.3cm}Software testing is the process of evaluation a software item to detect differences between given input and expected output. Also to access the feature of a software item. Testing assesses the quality of the product. Software testing is a process that should be done during the development process. In other words software testing is a verification and validation process.\\
+\\\textbf{Verification:}
+Verification is the process to make sure the product satisfies the conditions imposed at the start of the development phase. In other words, to make sure the product behaves the way we want it to.\\
+\\\textbf{Validation:}
+Validation is the process to make sure the product satisfies the specified requirements at the end of the development phase.\\
+  
+\begin{center}
+	  \begin{figure}[h]
+			\centering
+\includegraphics[width=15cm]{TC1.png}
+		\end{figure}
+	\end{center}
+
+\begin{center}
+	  \begin{figure}[h]
+			\centering
+\includegraphics[width=15cm]{TC2.png}
+		\end{figure}
+	\end{center}
+\begin{center}
+	  \begin{figure}[h]
+			\centering
+\includegraphics[width=15cm]{TC3.png}
+		\end{figure}
+	\end{center}
+
+\begin{center}
+	  \begin{figure}[h]
+			\centering
+\includegraphics[width=15cm]{TC4.png}
+		\end{figure}
+	\end{center}			
+
+\newpage
+\begin{center}
+\begin{huge}
+\section{Technical Specification}
+\end{huge}
+\end{center}
+\subsection{Advantages and Disadvantages}
+\textbf{Advantages}
+\begin{itemize}
+\item Faster and more accurate results. \\
+\item Reduce the manual process.  \\
+\item System is very help-full for  tracking  Campus Related Information.\\
+\item New People can get the quick response in case of  any problem related to Campus or any help.\\
+\item People can analyze the College by using System.\\
+\subsection{Disadvantages}
+\item The user need to be install application  everytime.
+\item The system need to access internet all time.
+
+
+
+\end{itemize}
+
+
+\subsection{Applications}
+\begin{itemize}
+\item The system helps user to manage manual work efficiently. \\
+\item All the data related to college can be gather at one place for further diagnosis \\
+\end{itemize}
+
+\newpage
+\section{Conclusion}
+\paragraph{}This proposed system gives access to a student via NFC. The inclusion of information technology approaches to optimize already existent practices is to be encouraged as any hope towards achieving the developmental visions of turning the our country from an underdeveloped nation to a developed nation can be actualized by the infusion of information technology approaches and technologies. This innovatory architecture can perform the most desired activities of the student in an attractive and user-friendly environment. 
+Typically students have provided features like attendance, alerts and notices, study materials so on. by the lecturer and students manually which spends a lot of time. Also lot amount of time wasted in manual system. This system will make use of wasted time to utilize it for value added tasks, this will help to improve campus related strategies.
+    
+
+
+\subsection{Future Scope}
+
+\begin{enumerate}
+\item As the technology emerges, it is possible to upgrade the system and can be adaptable to desired environment. 
+\item  Because it is based on object-oriented design, any further changes can be easily adaptable.
+\item Based on the future security issues, security can be improved using emerging technologies.
+\item Study can be further carried out to find the cost estimation for the implementation  of project in college. 
+
+\end{enumerate}
+
+\newpage
+\section{References}
+\begin{enumerate}
+\item \lq \lq  S. Kusakabe, H. H. Lin, Y. Omori, and K. Araki. Requirements.Development of Energy Management System for a Unit in Smart Campus. In 2014 IIAI 3rd International Conference on Advanced Applied Informatics (IIAIAAI), pages 405–410, August 2014.
+
+\item \lq \lq  V. Nikolopoulos, G. Mpardis, I. Giannoukos, I. Lykourentzou, and V. Loumos. Web-based decision-support system methodology for smart provision of adaptive digital energy services over cloud technologies.IET Software, 5(5):454–465, October 2011.
+
+\item \lq \lq  Hongseok Kim, Y. J. Kim, K. Yang, and M. Thottan. Cloud-based demand response for smart grid: Architecture and distributed algorithms.In 2011 IEEE International Conference on Smart Grid Communications (SmartGridComm), pages 398–403, October 2011.
+
+\item \lq \lq Y. Simmhan, S. Aman, A. Kumbhare, R. Liu, S. Stevens, Q. Zhou, and V. Prasanna. Cloud-Based Software Platform for Big Data Analytics in Smart Grids. Computing in Science Engineering, 15(4):38–47, July 2013.
+
+
+\item \lq \lq S. Bracco, F. Delfino, F. Pampararo, M. Robba, and M. Rossi. Economic and environmental performances quantification of the university of Genoa Smart Polygeneration Microgrid. In Energy Conference and Exhibition (ENERGYCON), 2012 IEEE International, pages 593–598, September 2012.
+
+\item \lq \lq  G. C. Lazaroiu, V. Dumbrava, M. Costoiu, M. Teliceanu, and M. Roscia.Smart campus-an energy integrated approach. In 2015 InternationalConference on Renewable Energy Research and Applications (ICRERA),pages 1497–1501, November 2015.
+
+\item \lq \lq  M. Wang and J. W. P. Ng. Intelligent Mobile Cloud Education:Smart Anytime-Anywhere Learning for the Next Generation Campus Environment. In 2012 8th International Conference on Intelligent Environments (IE), pages 149–156, June 2012.
+
+\item \lq \lq Y. Atif and S. Mathew. A Social Web of Things Approach to a Smart Campus Model. In Green Computing and Communications (GreenCom), 2013 IEEE and Internet of Things (iThings/CPSCom), IEEE International Conference on and IEEE Cyber, Physical and Social Computing, pages 349–354, August 2013.
+
+
+\item \lq \lq  A. Adamko, T. Kdek, L. Kollr, M. Kosa, and R. Tth. Cluster and discover services in the Smart Campus platform for online programming contests. In 2015 6th IEEE International Conference on Cognitive Infocommunications (CogInfoCom), pages 385–389, October 2015.
+
+\item \lq \lq T. Anagnostopoulos, A. Zaslavsky, and A. Medvedev. Robust waste collection exploiting cost efficiency of IoT potentiality in Smart Cities. In 2015 International Conference on Recent Advances in Internet of Things (RIoT), pages 1–6, April 2015.
+ 
+\end{enumerate}
+
+
+\end{normalsize}
+\end{document}
